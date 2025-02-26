@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- trong html <audio> được sử dụng để nhúng và phát trien âm thanh trên
+        trang web mp3, ogg, wav -->
+    <audio controls>
+      <source src="audio.mmp3" type="audio/mpeg" />
+      <source src="audio.ogg" type="audio/ogg" />
+      <!-- controls: hiển thị các nút điều khiển như: phát dừng, âm lượng...
+             source: chỉ định các định dạng âm thanh để đảm bảo tương thích với nhiều
+             thuộc tính phổ biến:
+             controls
+             autoplay - tự động phát
+             loop-phát lặp lại
+             muted-tắt âm thanh mặc định
+             preload: kiểm soát việc tả âm thanh trước khi phát
+                none: không tải lại
+                metadata: chỉ tải thông tin
+                auto: tải toàn bộ tập âm thanh -->
+    </audio>
+    <audio controls autoplay loop muted preload="auto">
+      <source src="HTML5 Video.mp4mp4" type="audio/mpeg" />
+    </audio>
+    <!-- lưu ý: 1 số trình duyệt như chrome và safari ngăn chặn autoplay -->
+    <video width="640" height="360" controls autoplay loop muted preload="auto">
+      <source src="HTML5 Video.mp4" type="video/mp4" />
+      <!-- poster: ảnh hiển thị trước khi phát video
+        px và %: đơn vị đo cơ định và đơn vị đo tương đối, phụ thuộc vào phần tử chứa nó
+        Nếu phần tử cha có width: 500px thì width:50% sẽ là 250px
+        Độ phân giải màn hình phổ biến 1920x1080: FULL HD: 2.07 triệu px
+        2560x1440: Quad HD: 3.69 triệu px, 3840x2160: 4KUND: 8.29 triệu px
+        7680x4320: 8kUHD: 33.18 triệu px (máy tính và TV) -->
+    </video>
+    <!-- Form thẻ chứa các phần tử nhập liệu vào
+     action=""URL xử lý dữ liệu
+     method ="POST" hoặc "GET" phương thức gửi dữ liệu đi an toàn
+     required: bắc buộc nhập
+     a_parent:mở trong frame cha(nếu dùng frame)_top: mở trong toàn bộ cửa sổ
+     Form giúp nhập dữ liệu và gửi lên máy chủ
+     cấu trúc của form
+     form action="" method="post"
+     <lable for=""><lable>
+      input type = "text"
+      giải thích:
+      form: thẻ chứa các phần tử nhập liệu vào
+      action="": URL xử lý dữ liệu
+      method="POST" hoặc "GET": phương thức gửi dữ liệu đi an toàn
+      required: bắt buộc nhập
+      enctype: quy định các mã hóa dữ liệu khi gửi(chỉ áp dụng cho phương thức post)
+      Trong enctype có giá trị
+      enctype="application" mặc định mã hóa dữ liệu đnag key-value
+      enctype="multipart"dùng khi tải file
+      enctype="text/plain": Gửi dữ liệu thô(ít dùng)
+      target: có các giá trị -->
+    <!-- CSS3 có 3 cách viết:inline,internal,external
+       cú pháp: 
+       selector{
+       property:value
+       }
+       1:inline: Viết trực tiếp trong thẻ html
+       2:internal: Viết trong thẻ <style> trong head
+        -->
+  </body>
+</html>
